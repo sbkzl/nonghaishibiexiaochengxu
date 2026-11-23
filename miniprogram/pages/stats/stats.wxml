@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="card">
+    <view class="title">🥧 病害分布占比</view>
+    <canvas canvas-id="pieCanvas" class="pie"></canvas>
+    <view class="legend">
+      <view class="legend-item" wx:for="{{pieData}}" wx:key="name">
+        <view class="dot" style="{{item.dotStyle}}"></view>
+        <text>{{item.name}}（{{item.value}}次）</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="title">📊 病害识别次数</view>
+    <view class="bar-item" wx:for="{{barData}}" wx:key="name">
+      <view class="bar-label">{{item.name}}</view>
+      <view class="bar-track">
+        <view class="bar-fill" style="{{item.barStyle}}"></view>
+      </view>
+      <view class="bar-count">{{item.value}}</view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="title">📈 总览</view>
+    <view class="overview">
+      <view class="ov-item">
+        <text class="ov-num">{{totalCount}}</text>
+        <text class="ov-label">总识别次数</text>
+      </view>
+      <view class="ov-item">
+        <text class="ov-num">{{diseaseTypes}}</text>
+        <text class="ov-label">病害种类</text>
+      </view>
+    </view>
+  </view>
+</view>

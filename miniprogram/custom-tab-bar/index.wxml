@@ -1,0 +1,13 @@
+<view class="tab-bar">
+  <view class="tab-item" wx:for="{{list}}" wx:key="path" bindtap="switchTab" data-path="{{item.path}}">
+    <!-- 中间首页：圆形凸起 -->
+    <view wx:if="{{index === 2}}" class="center-btn {{selected === index ? 'active' : ''}}">
+      <text class="center-icon">🏠</text>
+    </view>
+    <!-- 其他4个：正常排列 -->
+    <view wx:else class="normal-item {{selected === index ? 'active' : ''}}">
+      <text class="tab-icon">{{item.icon}}</text>
+      <text class="tab-text">{{item.text}}</text>
+    </view>
+  </view>
+</view>

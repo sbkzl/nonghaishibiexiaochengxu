@@ -1,0 +1,22 @@
+.tab-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  height: 110rpx; background: #fff;
+  display: flex; border-top: 1rpx solid #eee;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.tab-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+/* 正常tab */
+.tab-icon { font-size: 40rpx; }
+.tab-text { font-size: 22rpx; color: #666; margin-top: 6rpx; }
+.normal-item.active .tab-text { color: #2b7a4b; font-weight: bold; }
+
+/* 中间圆形凸起按钮 */
+.center-btn {
+  width: 100rpx; height: 100rpx; border-radius: 50%;
+  background: #2b7a4b; display: flex; align-items: center; justify-content: center;
+  margin-top: -50rpx; box-shadow: 0 6rpx 16rpx rgba(43,122,75,0.4);
+  border: 6rpx solid #fff;
+}
+.center-icon { font-size: 48rpx; }
+.center-btn.active { background: #1e5a37; }

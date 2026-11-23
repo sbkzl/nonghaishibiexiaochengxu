@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="hero">
+    <view class="hero-icon">🌿</view>
+    <view class="hero-title">植物病害智能识别</view>
+    <view class="hero-sub">基于YOLOv8 · 38种病害检测</view>
+  </view>
+
+
+  <view class="recommend-card" wx:if="{{recommend.recommendations.length > 0}}">
+    <view class="recommend-title">📍 {{recommend.province}}{{recommend.season}}易发病害预警</view>
+    <view class="rec-item" wx:for="{{recommend.recommendations}}" wx:key="chinese_name">
+      <view class="rec-name">{{item.chinese_name}} <text class="rec-crop">{{item.crop_name}}</text></view>
+      <view class="rec-prevent">🛡️ {{item.general_prevention}}</view>
+    </view>
+  </view>
+
+
+  <view class="grid">
+    <view class="grid-item" bindtap="goDetect">
+      <view class="grid-icon">📷</view>
+      <view class="grid-title">拍照识别</view>
+      <view class="grid-desc">上传叶片图片AI识别</view>
+    </view>
+    <view class="grid-item" bindtap="goDiseases">
+      <view class="grid-icon">📖</view>
+      <view class="grid-title">病害百科</view>
+      <view class="grid-desc">查看病害特征防治方案</view>
+    </view>
+    <view class="grid-item" bindtap="goHistory">
+      <view class="grid-icon">⏱</view>
+      <view class="grid-title">识别历史</view>
+      <view class="grid-desc">查看所有识别记录</view>
+    </view>
+    <view class="grid-item" bindtap="goStats">
+      <view class="grid-icon">📊</view>
+      <view class="grid-title">数据统计</view>
+      <view class="grid-desc">病害分布可视化分析</view>
+    </view>
+  </view>
+</view>

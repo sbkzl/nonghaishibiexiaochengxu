@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="header">📜 识别历史（共{{list.length}}条）</view>
+  <view class="history-item" wx:for="{{list}}" wx:key="id">
+    <image src="{{item.fix_url}}" class="thumb" mode="aspectFill" bindtap="previewImage" data-url="{{item.fix_url}}"></image>
+    <view class="info">
+      <view class="name">{{item.chinese_name}}</view>
+      <view class="meta">置信度：{{item.confidence}}</view>
+      <view class="meta">时间：{{item.create_time}}</view>
+      <view class="meta">地区：{{item.province}}</view>
+    </view>
+    <view class="del-btn" bindtap="deleteItem" data-id="{{item.id}}">🗑️</view>
+  </view>
+  <view wx:if="{{list.length === 0}}" class="empty">暂无识别记录</view>
+</view>

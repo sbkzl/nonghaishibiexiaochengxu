@@ -1,0 +1,26 @@
+.container { padding: 30rpx 24rpx 140rpx; }
+.upload-card {
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+  border-radius: 24rpx; padding: 40rpx 30rpx; margin-bottom: 24rpx;
+}
+.upload-area {
+  border: 3rpx dashed #73b98e; border-radius: 20rpx;
+  padding: 20rpx; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; margin-bottom: 30rpx;
+  background: #fff;
+}
+.upload-icon-large { font-size: 120rpx; }
+.upload-text-large { font-size: 32rpx; color: #333; margin-top: 20rpx; font-weight: bold; }
+.upload-hint { font-size: 24rpx; color: #999; margin-top: 10rpx; }
+.preview {
+  width: 100%; height: auto; border-radius: 16rpx; display: block;
+}
+.btn-start {
+  background: #2b7a4b; color: #fff; border: none; border-radius: 12rpx;
+  font-size: 32rpx; padding: 20rpx 0;
+}
+.btn-start[disabled] { background: #ccc; color: #fff; }
+.result-card { background: #fff; border-radius: 20rpx; padding: 30rpx; box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.08); }
+.sub-title { font-size: 32rpx; color: #2b7a4b; font-weight: bold; margin-bottom: 20rpx; }
+.item { margin: 16rpx 0; line-height: 1.8; font-size: 28rpx; }
+.label { font-weight: bold; color: #34495e; }

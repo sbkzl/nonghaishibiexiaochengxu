@@ -1,0 +1,22 @@
+.container { padding: 20rpx 20rpx 140rpx; }
+.header { font-size: 32rpx; font-weight: bold; color: #2b7a4b; padding: 20rpx 0; }
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+.disease-card {
+  background: #fff; border-radius: 16rpx; padding: 24rpx;
+  box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.06);
+}
+.disease-name { font-size: 28rpx; font-weight: bold; color: #333; text-align: center; }
+.crop-tag {
+  font-size: 20rpx; color: #2b7a4b; background: #e8f5e9;
+  padding: 4rpx 12rpx; border-radius: 16rpx; text-align: center;
+  margin-top: 12rpx;
+}
+.divider { height: 1rpx; background: #eee; margin: 16rpx 0; }
+.section { margin-top: 12rpx; }
+.section-title { font-size: 24rpx; font-weight: bold; color: #2b7a4b; margin-bottom: 8rpx; }
+.section-content { font-size: 22rpx; color: #555; line-height: 1.7; }
+.expand-tip { font-size: 22rpx; color: #aaa; margin-top: 16rpx; text-align: center; }

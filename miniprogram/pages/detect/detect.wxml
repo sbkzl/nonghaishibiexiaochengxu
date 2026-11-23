@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="upload-card">
+    <view class="upload-area" bindtap="chooseImage">
+      <image wx:if="{{previewImg}}" src="{{previewImg}}" class="preview" mode="widthFix"></image>
+      <block wx:else>
+        <view class="upload-icon-large">📷</view>
+        <view class="upload-text-large">点击拍照或选择相册图片</view>
+        <view class="upload-hint">支持 jpg / png 格式</view>
+      </block>
+    </view>
+    <button type="primary" bindtap="submitDetect" disabled="{{!previewImg || loading}}" class="btn-start">
+      {{loading ? '识别中…' : '开始识别'}}
+    </button>
+  </view>
+
+  <view class="card result-card" wx:if="{{resultData}}">
+    <view class="sub-title">📋 识别结果</view>
+    <view class="item"><text class="label">病害名称：</text>{{resultData.chinese_name}}</view>
+    <view class="item"><text class="label">作物：</text>{{resultData.crop_name}}</view>
+    <view class="item"><text class="label">置信度：</text>{{resultData.confidence}}</view>
+    <view class="item"><text class="label">症状描述：</text>{{resultData.symptom}}</view>
+    <view class="item"><text class="label">通用防治：</text>{{resultData.general_prevention}}</view>
+    <view wx:if="{{resultData.season_manage}}" class="item">
+      <text class="label">农事操作：</text>{{resultData.season_manage.farm_operation}}
+    </view>
+    <view wx:if="{{resultData.materials.length > 0}}" class="item">
+      <text class="label">推荐药剂：</text>
+      <block wx:for="{{resultData.materials}}" wx:key="id">{{item.material_name}} </block>
+    </view>
+  </view>
+</view>

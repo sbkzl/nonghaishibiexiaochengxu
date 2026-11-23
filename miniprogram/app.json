@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/detect/detect",
+    "pages/diseases/diseases",
+    "pages/history/history",
+    "pages/stats/stats",
+    "custom-tab-bar/index.wxss"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#2b7a4b",
+    "navigationBarTitleText": "植物病害智能识别",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#666",
+    "selectedColor": "#2b7a4b",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/diseases/diseases",
+        "text": "百科"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/stats/stats",
+        "text": "统计"
+      },
+      {
+        "pagePath": "pages/detect/detect",
+        "text": "识别"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

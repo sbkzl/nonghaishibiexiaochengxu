@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="header">📖 病害百科（共{{list.length}}种）</view>
+  <view class="grid">
+    <view class="disease-card" wx:for="{{list}}" wx:key="id" bindtap="toggle" data-index="{{index}}">
+      <view class="disease-name">{{item.chinese_name}}</view>
+      <view class="crop-tag">{{item.crop_name}}</view>
+      <block wx:if="{{item.open}}">
+        <view class="divider"></view>
+        <view class="section">
+          <view class="section-title">🔍 症状</view>
+          <view class="section-content">{{item.symptom}}</view>
+        </view>
+        <view class="section">
+          <view class="section-title">🛡️ 防治</view>
+          <view class="section-content">{{item.general_prevention}}</view>
+        </view>
+      </block>
+      <view wx:else class="expand-tip">点击展开 ▼</view>
+    </view>
+  </view>
+</view>
